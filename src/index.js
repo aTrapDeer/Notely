@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Landing from './pages/landing';
+import Pricing from './pages/pricing';
 import Features from './pages/features';
 import reportWebVitals from './reportWebVitals';
 import 'tailwindcss/tailwind.css';
@@ -17,6 +18,7 @@ function Root() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/features" element={<Features />} />
+        <Route path='/pricing' element={<Pricing />} />
         <Route 
           path="/app" 
           element={

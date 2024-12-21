@@ -1,0 +1,280 @@
+.pricing-page {
+  min-height: 100vh;
+  background: var(--background-light);
+  padding-bottom: var(--spacing-xl);
+}
+
+.pricing-hero {
+  text-align: center;
+  padding: 8rem var(--spacing-md) var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.pricing-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.pricing-text {
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.pricing-hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-dark);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.monthly, .yearly {
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.monthly.active, .yearly.active {
+  color: var(--text-primary);
+}
+
+.savings {
+  background: var(--success-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.pricing-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.pricing-card.popular {
+  border: 2px solid var(--primary-color);
+  transform: scale(1.05);
+}
+
+.plan-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--background-light);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.popular .plan-icon {
+  background: var(--primary-color);
+  color: white;
+}
+
+.plan-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.yearly-price {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.monthly-comparison {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.savings-label {
+  background: var(--success-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+}
+
+.feature-check {
+  color: var(--success-color);
+  width: 20px;
+  height: 20px;
+}
+
+.pricing-cta-section {
+  text-align: center;
+  margin-top: var(--spacing-xxl);
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: white;
+}
+
+.pricing-cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.pricing-cta-section p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.1rem;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 1rem;
+  right: -2rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 2rem;
+  transform: rotate(45deg);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .pricing-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+}
+
+.faq-section {
+  width: 100%;
+  padding: var(--spacing-xxl) 0;
+  background: var(--background-light);
+  margin-top: 7rem;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.faq-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.faq-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.faq-item {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.faq-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.faq-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-container {
+    max-width: 500px;
+  }
+} 

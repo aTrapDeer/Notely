@@ -16,7 +16,7 @@ function Landing() {
           <Link to="/" className="nav-logo">Notely</Link>
           <div className="nav-links">
             <Link to="/features">Features</Link>
-            <Link to="#pricing">Pricing</Link>
+            <Link to="/pricing">Pricing</Link>
             <Link to="/app" className="nav-cta">Get Started</Link>
           </div>
         </motion.div>

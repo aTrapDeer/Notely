@@ -113,12 +113,12 @@
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 4.5rem;
+  font-weight: 900;
   margin-bottom: var(--spacing-lg);
-  line-height: 1.2;
+  line-height: 1.1;
   color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero-card {
@@ -132,10 +132,25 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #fff, #B388FF);
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  text-shadow: none;
+  position: relative;
+  display: inline-block;
+}
+
+.gradient-text::after {
+  content: 'Notes';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  -webkit-text-fill-color: white;
+  opacity: 0.9;
+  z-index: -1;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero-description {
@@ -477,7 +492,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   .hero-stats {
@@ -508,7 +523,7 @@
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: var(--spacing-md);
   }
 
